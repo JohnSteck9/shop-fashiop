@@ -26,6 +26,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+#      - name: JS Linter
+#        run: npm run lint
+#
+#      - name: CSS Linter
+#        run: npm run stylelint
+
       - name: Run tests
         run: npm run test:headless
 
@@ -39,3 +45,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: dist/shop-fashiop
           enable_jekyll: true
+          BRANCH: gh-pages
